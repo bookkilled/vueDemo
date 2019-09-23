@@ -7,7 +7,9 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 import '@vant/touch-emulator'
 import loading from './components/loading/'
+import vMessage from './components/message/'
 
+Vue.use(vMessage)
 Vue.use(loading)
 Vue.use(Vant)
 Vue.use(Directives)

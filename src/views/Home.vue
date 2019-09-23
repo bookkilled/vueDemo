@@ -6,12 +6,15 @@
 			<van-col span="8"><van-button type="primary" class="btn" v-copy="textinp">copy</van-button></van-col>
 		</van-row>
 		<van-row class="maxW">
-			<van-col span="8">全局组件</van-col>
+			<van-col span="8">全局组件Loading</van-col>
 			<van-col span="8"><loading></loading></van-col>
 			<van-col span="8">--</van-col>
 		</van-row>
-		<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+		<van-row class="maxW">
+			<van-col span="8">全局组件Message</van-col>
+			<van-col span="8">--</van-col>
+			<van-col span="8"><van-button type="primary" class="btn" @click="openMessage">点击</van-button></van-col>
+		</van-row>
 	</div>
 </template>
 
@@ -23,7 +26,8 @@ export default {
 	name: 'home',
 	data () {
 		return {
-			textinp: ''
+			textinp: '',
+			messageNum: 0
 		}
 	},
 	components: {
@@ -32,6 +36,14 @@ export default {
 	methods: {
 		copyInp () {
 			console.log(this.textinp)
+		},
+		openMessage() {
+			this.messageNum ++
+			this.messageNum == 1 && this.$message.info('普通消息')
+			this.messageNum == 2 && this.$message.success('成功消息')
+			this.messageNum == 3 && this.$message.warning('警告消息')
+			this.messageNum == 4 && this.$message.error('错误消息')
+			this.messageNum == 4 && (this.messageNum = 0)
 		}
 	}
 }
