@@ -6,9 +6,10 @@ import Directives from './directives'
 import Vant from 'vant'
 import 'vant/lib/index.css'
 import '@vant/touch-emulator'
+import loading from './components/loading/'
 
+Vue.use(loading)
 Vue.use(Vant)
-
 Vue.use(Directives)
 
 Vue.config.productionTip = false

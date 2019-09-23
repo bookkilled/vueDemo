@@ -5,6 +5,11 @@
 			<van-col span="8"><van-field v-model="textinp" placeholder="请输入用户名" /></van-col>
 			<van-col span="8"><van-button type="primary" class="btn" v-copy="textinp">copy</van-button></van-col>
 		</van-row>
+		<van-row class="maxW">
+			<van-col span="8">全局组件</van-col>
+			<van-col span="8"><loading></loading></van-col>
+			<van-col span="8">--</van-col>
+		</van-row>
 		<!-- <img alt="Vue logo" src="../assets/logo.png"> -->
 		<!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 	</div>
