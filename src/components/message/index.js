@@ -30,9 +30,9 @@ const MESSAGE = {
 				return h('message', { props })
 			},
 			data () {
-			return {
-				show: false
-			}
+				return {
+					show: false
+				}
 			}
 		})
 		let newMessage = new VueMessage()

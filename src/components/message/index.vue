@@ -15,7 +15,7 @@
         type: String,
         default: 'info',
         validator: val => ['info', 'success', 'warning', 'error'].includes(val)
-		//['info', 'success', 'warning', 'error'] 表示type只接收这四个字符串作为参数传入message组件
+		// ['info', 'success', 'warning', 'error'] 表示type只接收这四个字符串作为参数传入message组件
       },
       text: {
         type: String,
@@ -69,5 +69,5 @@
 		&.warning {
 			color: @warning-color;
 		}
-	}	  
+	}
 </style>
