@@ -30,14 +30,14 @@ const Loading = {
 				let t1 = setTimeout(() => {
 					clearTimeout(t1)
 					vm.show = false
-					document.body.removeChild(el) // 从body中移除dom
+					el && document.body.removeChild(el) // 从body中移除dom
 					newLoading.$destroy()
 					vm = null // 设置为null，好让js垃圾回收算法回收，释放内存
 					callBack && (typeof callBack === 'function') && callBack()
 				}, 1e4)
 			} else {
 				vm.show = false
-				document.body.removeChild(document.querySelectorAll('.loading')[0]) // 从body中移除dom
+				document.body.removeChild(document.querySelector('.loading')) // 从body中移除dom
 				newLoading.$destroy()
 				vm = null
 				callBack && (typeof callBack === 'function') && callBack()

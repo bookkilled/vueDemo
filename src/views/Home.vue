@@ -49,10 +49,10 @@ export default {
 			this.messageNum === 4 && (this.messageNum = 0)
 		},
 		openLoading () {
-			this.$loading.open()
+			this.$loading.open(()=> {console.log('open成功！')})
 		},
 		closeLoading () {
-			this.$loading.close()
+			this.$loading.close(()=> {console.log('close成功！')})
 		}
 	}
 }
